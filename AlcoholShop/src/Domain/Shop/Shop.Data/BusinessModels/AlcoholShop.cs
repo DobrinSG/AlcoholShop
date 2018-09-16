@@ -8,6 +8,7 @@ namespace Shop.Data.BusinessModels
         public AlcoholShop()
         {
             this.Tables = new List<Table>();
+            this.Waitress = new List<Person>();
         }
 
         private string name;
@@ -15,6 +16,8 @@ namespace Shop.Data.BusinessModels
         public string Name { get { return name; } set { name = value; } }
 
         public List<Table> Tables { get; set; }
+
+        public List<Person> Waitress { get; set; }
 
         public override bool CheckGoods(Good good)
         {

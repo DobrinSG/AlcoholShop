@@ -39,7 +39,10 @@ namespace ConsoleApp1
 
             candyShop.AddGood(skittles);
 
-            candyShop.AddGood(snickers);           
+            candyShop.AddGood(snickers);
+
+            alcoholShop.Waitress.Add(nina);
+            alcoholShop.Waitress.Add(slaveia);
 
             Console.WriteLine($"Income before sell---> {alcoholShop.Income} " +
                 $"Count: {alcoholShop.Goods.Count()}");
@@ -89,8 +92,7 @@ namespace ConsoleApp1
                 }
             }
             Console.WriteLine();
-
-            Console.WriteLine(slaveia.Age);
+            Console.WriteLine(alcoholShop.Waitress.Count);
             Console.ReadLine();
         }
     }
