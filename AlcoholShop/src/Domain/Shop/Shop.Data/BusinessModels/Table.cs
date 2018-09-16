@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Shop.Data.BusinessModels
 {
-  public class Table
+  public class Table : AlcoholShop
     {
         public Table(string tableNumber)
         {
@@ -12,9 +12,5 @@ namespace Shop.Data.BusinessModels
         }
 
         public string TableNumber { get; set; }
-
-       
-
-        
     }
 }
