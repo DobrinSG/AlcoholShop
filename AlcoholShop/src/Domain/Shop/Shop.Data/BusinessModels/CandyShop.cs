@@ -12,7 +12,11 @@ namespace Shop.Data.BusinessModels
 
         public override bool CheckGoods(Good good)
         {
-            throw new NotImplementedException();
+            if (!(good is Candy))
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

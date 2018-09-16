@@ -33,6 +33,10 @@ namespace ConsoleApp1
 
             alcoholShop.Tables.Add(table2);
 
+            candyShop.AddGood(skittles);
+
+            candyShop.AddGood(snickers);           
+
             Console.WriteLine($"Income before sell---> {alcoholShop.Income} " +
                 $"Count: {alcoholShop.Goods.Count()}");
 
@@ -64,6 +68,21 @@ namespace ConsoleApp1
                 else
                 {
                     Console.Write(table.TableNumber);
+                }
+            }
+            Console.WriteLine(candyShop.Goods.Count);
+            Console.WriteLine();
+            Console.Write("List of candies--->");
+
+            foreach (var candy in candyShop.Goods)
+            {
+                if (candy == candyShop.Goods[0])
+                {
+                    Console.Write($"{candy.Name}, ");
+                }
+                else
+                {
+                    Console.Write(candy.Name);
                 }
             }
 
