@@ -1,6 +1,5 @@
 ﻿using Shop.Data.BusinessModels;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace ConsoleApp1
@@ -25,9 +24,9 @@ namespace ConsoleApp1
 
             var vodkaSmirnoff = new Alcohol("Smirnoff", 70);
 
-            var table1 = new Table("Table №1");
+            var table1 = new Table("Table №1", "Free");
 
-            var table2 = new Table("Тable №2");
+            var table2 = new Table("Тable №2", "Free");
 
             var skittles = new Candy("Skittles", 2);
 
@@ -39,7 +38,7 @@ namespace ConsoleApp1
 
             var petur = new Client("Petur", "Petrov", 40);
 
-            var neli = new Client("Neli", "Kirilova", 14);
+            var neli = new Client("Neli", "Kirilova", 25);
 
             alcoholShop.AddGood(wiskeyJack);
 
@@ -60,6 +59,8 @@ namespace ConsoleApp1
             alcoholShop.Clients.Add(petur);
 
             candyShop.Clients.Add(neli);
+
+            alcoholShop.Reserve(table1);
 
             Console.WriteLine($"Income before sell---> {alcoholShop.Income} " +
                 $"Count: {alcoholShop.Goods.Count()}");
@@ -109,8 +110,9 @@ namespace ConsoleApp1
                 }
             }
             Console.WriteLine();
-            Console.WriteLine(candyShop.Clients.Count);
-            Console.WriteLine(alcoholShop.Clients.Count);
+            Console.WriteLine($"{table1.TableNumber}" + $": {table1.TableStatus}");
+            Console.WriteLine($"{table2.TableNumber}" + $": {table2.TableStatus}");
+
             Console.ReadLine();
         }
     }

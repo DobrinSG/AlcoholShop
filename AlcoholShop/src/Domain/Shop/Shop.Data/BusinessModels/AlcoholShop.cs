@@ -27,5 +27,13 @@ namespace Shop.Data.BusinessModels
             }
             return true;
         }
+
+        public void Reserve(Table table)
+        {
+            if (table.TableStatus == "Free")
+            {
+                table.TableStatus = "Reserved";
+            }
+        }
     }
 }
