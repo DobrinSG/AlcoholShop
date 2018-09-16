@@ -10,6 +10,7 @@ namespace Shop.Data.BusinessModels
         public BaseShop()
         {
             this.Goods = new List<Good>();
+            this.Clients = new List<Person>();
         }
 
         public Company Company { get; set; }
@@ -17,6 +18,8 @@ namespace Shop.Data.BusinessModels
         public Address Address { get; set; }
 
         public List<Good> Goods { get; set; }
+
+        public List<Person> Clients { get; set; }
 
         public decimal Income { get; set; }
 

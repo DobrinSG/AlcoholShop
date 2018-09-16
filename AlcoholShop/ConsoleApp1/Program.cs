@@ -11,7 +11,15 @@ namespace ConsoleApp1
         {
             var alcoholShop = new AlcoholShop();
 
+            var fridge = new AlcoholShop();
+
+            var company = new Company();
+
+            var address = new Address("Stara Zagora", "Tsar Simeon Veliki", "123");
+
             var candyShop = new CandyShop();
+
+            var climatic = new CandyShop();
 
             var wiskeyJack = new Alcohol("Jack Daniels", 190);
 
@@ -29,6 +37,10 @@ namespace ConsoleApp1
 
             var slaveia = new Waitress("Slaveia", "Todorova", 30);
 
+            var petur = new Client("Petur", "Petrov", 40);
+
+            var neli = new Client("Neli", "Kirilova", 14);
+
             alcoholShop.AddGood(wiskeyJack);
 
             alcoholShop.AddGood(vodkaSmirnoff);
@@ -42,7 +54,12 @@ namespace ConsoleApp1
             candyShop.AddGood(snickers);
 
             alcoholShop.Waitress.Add(nina);
+
             alcoholShop.Waitress.Add(slaveia);
+
+            alcoholShop.Clients.Add(petur);
+
+            candyShop.Clients.Add(neli);
 
             Console.WriteLine($"Income before sell---> {alcoholShop.Income} " +
                 $"Count: {alcoholShop.Goods.Count()}");
@@ -92,7 +109,8 @@ namespace ConsoleApp1
                 }
             }
             Console.WriteLine();
-            Console.WriteLine(alcoholShop.Waitress.Count);
+            Console.WriteLine(candyShop.Clients.Count);
+            Console.WriteLine(alcoholShop.Clients.Count);
             Console.ReadLine();
         }
     }
