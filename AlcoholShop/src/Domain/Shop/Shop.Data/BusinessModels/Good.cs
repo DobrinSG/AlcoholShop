@@ -11,8 +11,8 @@ namespace Shop.Data.BusinessModels
             Price = price;
         }
 
-        public string Name { get; }
-        public decimal Price { get;}
+        public string Name { get; set; }
+        public decimal Price { get; set; }
         
 
         public override string ToString()

@@ -11,20 +11,29 @@ namespace ConsoleApp1
         {
             var alcoholShop = new AlcoholShop();
 
-            var alcohol = new Alcohol("da", 190);
+            var wiskeyJack = new Alcohol("Jack Daniels", 190);
 
-            var alcohol2 = new Alcohol("ne", 70);
+            var vodkaSmirnoff = new Alcohol("Smirnoff", 70);
 
+            var table1 = new Table("Table №1");
+            var table2 = new Table("Тable №2");
+
+            
+            
          
-            alcoholShop.AddGood(alcohol);
+            alcoholShop.AddGood(wiskeyJack);
 
-            alcoholShop.AddGood(alcohol2);
-           
+            alcoholShop.AddGood(vodkaSmirnoff);
+
+            
+            
+            
             Console.WriteLine($"Income before---> {alcoholShop.Income} " +
                 $"Count: {alcoholShop.Goods.Count()}");
 
-            alcoholShop.Sell(alcohol);
+            alcoholShop.Sell(wiskeyJack);
 
+            Console.WriteLine(table1.TableNumber);
 
             Console.WriteLine($"Income after---> {alcoholShop.Income} " +
                 $"Count: {alcoholShop.Goods.Count()}");
