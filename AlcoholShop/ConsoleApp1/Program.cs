@@ -11,6 +11,8 @@ namespace ConsoleApp1
         {
             var alcoholShop = new AlcoholShop();
 
+            var candyShop = new CandyShop();
+
             var wiskeyJack = new Alcohol("Jack Daniels", 190);
 
             var vodkaSmirnoff = new Alcohol("Smirnoff", 70);
@@ -18,6 +20,10 @@ namespace ConsoleApp1
             var table1 = new Table("Table №1");
 
             var table2 = new Table("Тable №2");
+
+            var skittles = new Candy("Skittles", 2);
+
+            var snickers = new Candy("Snickers", 2.5m);
          
             alcoholShop.AddGood(wiskeyJack);
 
@@ -26,7 +32,7 @@ namespace ConsoleApp1
             alcoholShop.Tables.Add(table1);
 
             alcoholShop.Tables.Add(table2);
-            
+
             Console.WriteLine($"Income before sell---> {alcoholShop.Income} " +
                 $"Count: {alcoholShop.Goods.Count()}");
 
