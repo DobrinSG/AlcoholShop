@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace Shop.Data.BusinessModels
 {
-  public class Table : AlcoholShop
+  public class Table 
     {
         public Table(string tableNumber)
         {

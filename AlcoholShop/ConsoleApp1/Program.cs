@@ -18,40 +18,47 @@ namespace ConsoleApp1
             var table1 = new Table("Table №1");
 
             var table2 = new Table("Тable №2");
-
-            
-            
          
             alcoholShop.AddGood(wiskeyJack);
 
             alcoholShop.AddGood(vodkaSmirnoff);
 
-
             alcoholShop.Tables.Add(table1);
 
             alcoholShop.Tables.Add(table2);
             
-            Console.WriteLine($"Income before---> {alcoholShop.Income} " +
+            Console.WriteLine($"Income before sell---> {alcoholShop.Income} " +
                 $"Count: {alcoholShop.Goods.Count()}");
 
-          //  alcoholShop.Sell(wiskeyJack);
+            alcoholShop.Sell(wiskeyJack);
 
-            Console.WriteLine(table1.TableNumber);
+            Console.WriteLine($"Display table1---> {table1.TableNumber}");
 
-            Console.WriteLine($"Income after---> {alcoholShop.Income} " +
+            Console.WriteLine($"Income after sell---> {alcoholShop.Income} " +
                 $"Count: {alcoholShop.Goods.Count()}");
-            //Console.WriteLine($"Alcohol 2 ---> {alcohol2.Price}");
+
+            Console.Write("List of goods in alcoholShop--->");
 
             foreach (var good in alcoholShop.Goods)
             {
                 Console.WriteLine(good.Name);
             }
 
-            Console.WriteLine(alcoholShop.Tables.Count);
+            Console.WriteLine($"Count of tables---> { alcoholShop.Tables.Count}");
+
+            Console.Write("List of tables in alcoholShop--->");
 
             foreach (var table in alcoholShop.Tables)
             {
-                Console.WriteLine(table.TableNumber);
+                if (table == alcoholShop.Tables[0])
+                {
+
+                Console.Write($"{ table.TableNumber}, ");
+                }
+                else
+                {
+                    Console.Write(table.TableNumber);
+                }
             }
 
             Console.ReadLine();
