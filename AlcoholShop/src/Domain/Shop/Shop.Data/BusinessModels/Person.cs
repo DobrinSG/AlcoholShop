@@ -1,6 +1,6 @@
 ﻿namespace Shop.Data.BusinessModels
 {
-    public abstract class Person
+    public abstract class Person 
     {
         public Person(string firstName, string lastName, int age)
         {
@@ -14,6 +14,5 @@
         public string LastName { get; set; }
 
         public int Age { get; set; }
-
     }
 }

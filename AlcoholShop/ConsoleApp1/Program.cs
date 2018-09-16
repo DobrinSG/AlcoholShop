@@ -20,7 +20,7 @@ namespace ConsoleApp1
 
             var climatic = new CandyShop();
 
-            var wiskeyJack = new Alcohol("Jack Daniels", 190);
+            var whiskeyJack = new Alcohol("Jack Daniels", 190);
 
             var vodkaSmirnoff = new Alcohol("Smirnoff", 70);
 
@@ -36,11 +36,15 @@ namespace ConsoleApp1
 
             var slaveia = new Waitress("Slaveia", "Todorova", 30);
 
-            var petur = new Client("Petur", "Petrov", 40);
+            var petur = new Client("Petur", "Petrov", 42);
 
             var neli = new Client("Neli", "Kirilova", 25);
 
-            alcoholShop.AddGood(wiskeyJack);
+            var todor = new Seller("Todor", "Petrov", 27);
+
+            var dimo = new Seller("Dimitar", "Dimitrov,", 32);
+
+            alcoholShop.AddGood(whiskeyJack);
 
             alcoholShop.AddGood(vodkaSmirnoff);
 
@@ -60,12 +64,16 @@ namespace ConsoleApp1
 
             candyShop.Clients.Add(neli);
 
+            alcoholShop.Sellers.Add(dimo);
+
+            candyShop.Sellers.Add(todor);
+
             alcoholShop.Reserve(table1);
 
             Console.WriteLine($"Income before sell---> {alcoholShop.Income} " +
                 $"Count: {alcoholShop.Goods.Count()}");
 
-            alcoholShop.Sell(wiskeyJack);
+            alcoholShop.Sell(whiskeyJack);
 
             Console.WriteLine($"Display table1---> {table1.TableNumber}");
 
@@ -79,7 +87,7 @@ namespace ConsoleApp1
                 Console.WriteLine(good.Name);
             }
 
-            Console.WriteLine($"Count of tables---> { alcoholShop.Tables.Count}");
+            Console.WriteLine($"Count of tables in alcoholShop---> { alcoholShop.Tables.Count}");
 
             Console.Write("List of tables in alcoholShop--->");
 
@@ -96,7 +104,7 @@ namespace ConsoleApp1
                 }
             }
             Console.WriteLine();
-            Console.Write("List of candies--->");
+            Console.Write("List of candies in candyShop--->");
 
             foreach (var candy in candyShop.Goods)
             {
@@ -110,8 +118,14 @@ namespace ConsoleApp1
                 }
             }
             Console.WriteLine();
+
             Console.WriteLine($"{table1.TableNumber}" + $": {table1.TableStatus}");
+
             Console.WriteLine($"{table2.TableNumber}" + $": {table2.TableStatus}");
+
+            Console.WriteLine($"candyShop seller---> {candyShop.Sellers[0].FirstName}");
+
+            Console.WriteLine($"alcoholShop seller--->{alcoholShop.Sellers[0].FirstName}");
 
             Console.ReadLine();
         }

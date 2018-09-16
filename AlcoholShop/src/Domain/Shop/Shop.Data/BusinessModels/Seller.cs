@@ -6,6 +6,6 @@
         {
         }
 
-        public int Sallary { get; set; }
+        public decimal Salary { get; set; }   
     }
 }

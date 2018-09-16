@@ -9,5 +9,7 @@ namespace Shop.Data.BusinessModels
         public Waitress(string firstName, string lastName, int age) : base(firstName, lastName, age)
         {
         }
+
+        public decimal Salary { get; set; }
     }
 }

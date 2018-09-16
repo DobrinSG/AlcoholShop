@@ -11,6 +11,7 @@ namespace Shop.Data.BusinessModels
         {
             this.Goods = new List<Good>();
             this.Clients = new List<Person>();
+            this.Sellers = new List<Person>();
         }
 
         public Company Company { get; set; }
@@ -20,6 +21,8 @@ namespace Shop.Data.BusinessModels
         public List<Good> Goods { get; set; }
 
         public List<Person> Clients { get; set; }
+
+        public List<Person> Sellers { get; set; }
 
         public decimal Income { get; set; }
 
