@@ -24,7 +24,11 @@ namespace ConsoleApp1
             var skittles = new Candy("Skittles", 2);
 
             var snickers = new Candy("Snickers", 2.5m);
-         
+
+            var nina = new Waitress("Nina", "Dimova", 24);
+
+            var slaveia = new Waitress("Slaveia", "Todorova", 30);
+
             alcoholShop.AddGood(wiskeyJack);
 
             alcoholShop.AddGood(vodkaSmirnoff);
@@ -70,7 +74,6 @@ namespace ConsoleApp1
                     Console.Write(table.TableNumber);
                 }
             }
-            Console.WriteLine(candyShop.Goods.Count);
             Console.WriteLine();
             Console.Write("List of candies--->");
 
@@ -85,7 +88,9 @@ namespace ConsoleApp1
                     Console.Write(candy.Name);
                 }
             }
+            Console.WriteLine();
 
+            Console.WriteLine(slaveia.Age);
             Console.ReadLine();
         }
     }
