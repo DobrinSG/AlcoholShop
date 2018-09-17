@@ -19,6 +19,8 @@ namespace Shop.Data.BusinessModels
 
         public List<Person> Waitress { get; set; }
 
+        public Fridge Fridge { get; set; }
+
         public override bool CheckGoods(Good good)
         {
             if (!(good is Alcohol))

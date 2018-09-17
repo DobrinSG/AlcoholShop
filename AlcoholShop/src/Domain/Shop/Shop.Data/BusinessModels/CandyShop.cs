@@ -6,9 +6,11 @@ namespace Shop.Data.BusinessModels
 {
    public class CandyShop : BaseShop
     {
-        public CandyShop()
-        {
-        }
+        private string name;
+
+        public string Name { get { return name; } set { name = value; } }
+
+        public AirConditioner AirConditioner { get; set; }
 
         public override bool CheckGoods(Good good)
         {

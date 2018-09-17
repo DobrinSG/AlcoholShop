@@ -8,17 +8,25 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            var alcoholShop = new AlcoholShop();
-
-            var fridge = new AlcoholShop();
-
             var company = new Company();
 
-            var address = new Address("Stara Zagora", "Tsar Simeon Veliki", "123");
+            company.Name = "Sweet and Drunk";
+
+            var alcoholShop = new AlcoholShop();
+
+            alcoholShop.Name = "Once Upon a Bottle";
+
+            alcoholShop.Address = new Address("Stara Zagora", "Tsar Simeon Veliki", "123");
+
+            alcoholShop.Fridge = new Fridge();
 
             var candyShop = new CandyShop();
 
-            var climatic = new CandyShop();
+            candyShop.Name = "Candy Heaven";
+
+            candyShop.Address = new Address("Stara Zagora", "Tsar Simeon Veliki", "102");
+
+            candyShop.AirConditioner = new AirConditioner();
 
             var whiskeyJack = new Alcohol("Jack Daniels", 190);
 
