@@ -6,8 +6,6 @@ namespace Shop.Data.BusinessModels
 {
   public class Fridge
     {
-        public Fridge()
-        {
-        }
+        
     }
 }

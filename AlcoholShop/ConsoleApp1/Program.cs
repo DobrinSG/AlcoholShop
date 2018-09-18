@@ -32,14 +32,14 @@ namespace ConsoleApp1
 
             var vodkaSmirnoff = new Alcohol("Smirnoff", 70);
 
-            var table1 = new Table("Table №1", "Free");
+            var table1 = new Table("Table 1", "Free");
 
-            var table2 = new Table("Тable №2", "Free");
+            var table2 = new Table("Table 2", "Free");
 
             var skittles = new Candy("Skittles", 2);
 
             var snickers = new Candy("Snickers", 2.5m);
-
+        
             var nina = new Waitress("Nina", "Dimova", 24);
 
             var slaveia = new Waitress("Slaveia", "Todorova", 30);
